@@ -9,10 +9,9 @@
     <!-- NAV -->
     <nav>
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">SKILLS</a></li>
+        <li><a href="#about-section">ABOUT</a></li>
+        <li><a href="#skills-section">SKILLS</a></li>
+        <li><a href="#projects-section">PROGETTI</a></li>
       </ul>
     </nav>
   </header>
