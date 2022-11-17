@@ -1,10 +1,12 @@
 <template>
   <header class="header-container">
+    <!-- LOGO -->
     <div class="logo">
       <div>
         <a href="#">Aveta Manuel</a>
       </div>
     </div>
+    <!-- NAV -->
     <nav>
       <ul>
         <li><a href="#">HOME</a></li>
@@ -38,15 +40,12 @@ export default {
   margin: 1rem 0;
 }
 // NAV
-nav{
-
-}
-ul{
+nav ul{
   display: flex;
   align-items: center;
   height: 100%;
 }
-li{
+nav ul li{
   margin-left: 4rem;
 }
 </style>
