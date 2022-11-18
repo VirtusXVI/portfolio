@@ -1,7 +1,7 @@
 <template>
   <header class="header-container">
     <!-- LOGO -->
-    <div class="logo">
+    <div>
       <div>
         <!-- <a href="#">Aveta Manuel</a> -->
       </div>
@@ -31,15 +31,9 @@ export default {
   display: flex;
   justify-content: center;
   position: fixed;
+  z-index: 999;
   background-color: $background-color;
 }
-// LOGO
-// .logo{
-//   font-family: 'Dancing Script', cursive;
-//   font-size: 2rem;
-//   width: 30%;
-//   margin: 1rem 0;
-// }
 // NAV
 nav ul{
   display: flex;

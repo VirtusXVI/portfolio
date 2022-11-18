@@ -13,52 +13,71 @@
             <div class="about-title">
               Ciao, sono Manuel. <br>
             </div>
-            <div>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. A obcaecati illum sunt odit. Perferendis, rerum porro quaerat ea itaque odio dolorem, libero eveniet amet, fuga vero nihil accusamus ut repellendus.
+            <div class="about-text">
+              Sono un Full-Stack Web Developer.
             </div>
           </div>
           <div class="about-logo">
-            <img src="../../assets/img/logo.png" alt="">
+            <img class="logo" src="../../assets/img/logo.png" alt="">
           </div>
         </div>
       </section>
     </div>
-    <!-- SKILLS SECTION -->
-    <!-- <section id="skills-section" class="skills-section">
-      <div class="titles">
-        LE MIE SKILLS
+    <div class="yellow-background blue-text">
+      <div class="container container-yellow">
+        <section id="skills-section" class="skills-section">
+          <div class="skill-card">
+            <!-- FIRST CARD -->
+            <div class="card-img">
+              <img src="../../assets/img/frontend.jpg" alt="">
+            </div>
+            <div class="skill-text-1">
+              <div class="titles">
+                <h2>FRONT-END DEVELOPMENT</h2>
+              </div>
+              <ul>
+                <li>HTML 5</li>
+                <li>CSS 3</li>
+                <li>Javascript</li>
+                <li>Vue.js</li>
+              </ul>
+            </div>
+          </div>
+          <!-- SECOND CARD -->
+          <div class="skill-card-2">
+            <div class="skill-text-2">
+              <div class="titles">
+                <h2>BACK-END DEVELOPMENT</h2>
+              </div>
+              <ul>
+                <li>PHP</li>
+                <li>Laravel</li>
+                
+              </ul>
+            </div>
+            <div class="card-img">
+              <img src="../../assets/img/backend.jpg" alt="">
+            </div>
+          </div>
+          <!-- THIRD CARD -->
+          <div class="skill-card">
+            <div class="card-img">
+              <img src="../../assets/img/tools.jpg" alt="">
+            </div>
+            <div class="skill-text-1">
+              <div class="titles">
+                <h2>DEV TOOLS</h2>
+              </div>
+              <ul>
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="skills-cards">
-        <div class="skill-card">
-          <img class="tech-icon" src="../../assets/img/frontend.jpg" alt="">
-          <h2>FRONT END DEVELOPMENT</h2>
-          <ul>
-            <li>HTML 5</li>
-            <li>CSS 3</li>
-            <li>JAVASCRIPT</li>
-            <li>VUE.JS</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <img class="tech-icon" src="../../assets/img/backend.jpg" alt="">
-          <h2>BACK END DEVELOPMENT</h2>
-          <ul>
-            <li>PHP</li>
-            <li>LARAVEL</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <img class="tech-icon" src="../../assets/img/tools.jpg" alt="">
-          <h2>DEV TOOLS</h2>
-          <ul>
-            <li>BOOTSTRAP</li>
-            <li>GITHUB</li>
-            <li>GIT</li>
-            <li>VS CODE</li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
+    </div>
     <!-- PROJECTS SECTION -->
     <!-- <section id="projects-section" class="projects-section">
       <div class="titles">
@@ -108,12 +127,25 @@ export default {
 
 <style lang="scss">
 @import '../../assets/scss/variables.scss';
+// COMMON
+// TITLES
+.titles h2{
+  font-size: 2.2rem;
+  color: $background-color;
+}
+
 // MAIN
 .container{
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+.yellow-background{
+  background-color: $text-color;
+}
+.blue-text{
+  color: $background-color;
 }
 .container-blue{
   border-left: 2px solid $text-color;
@@ -123,24 +155,22 @@ export default {
   border-left: 2px solid $background-color;
   border-right: 2px solid $background-color;
 }
-// TITLES
-.titles{
-  font-size: 4rem;
-  text-align: center;
-  margin-top: 100px;
-  color: $titles-color;
-}
 
 // ABOUT SECTION
 .about-section{
+  width: 90%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  // align-items: center;
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 .about-title{
-  font-size: 3rem;
+  font-size: 6rem;
   color: $text-color;
+}
+.about-text{
+  font-size: 2rem;
 }
 .title-logo{
   display: flex;
@@ -148,7 +178,12 @@ export default {
   width: 40%;
 }
 .about-logo{
-  padding-top: 2rem;
+  padding-top: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.logo{
   width: 50%;
 }
 // MAIN IMG
@@ -157,67 +192,64 @@ export default {
   position: relative;
 }
 .img{
-  width: 237px;
+  width: 400px;
   border-radius: 50%;
 }
 // PATTERN
 .pattern{
-  width: 104px;
+  width: 200px;
   border-radius: 50%;
   position: absolute;
   top: -30px;
   left: -30px;
 }
 .pattern-2{
-  width: 208px;
+  width: 250px;
   border-radius: 50%;
   position: absolute;
-  top: 40%;
-  left: 20%;
+  top: 45%;
+  left: 35%;
   z-index: -1;
 }
-// DISCOVER TEXT
-.discover-text{
-  margin-top: 100px;
-}
-i{
-  height: 100px;
-  width: 100px;
-}
-
 // SKILLS SECTION
-// CARDS
-.skills-cards{
+.skills-section{
+  padding: 100px 0;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-top: 100px;
+  flex-direction: column;
+  align-items: center;
 }
 .skill-card{
-  width: 25%;
-  border: 1px solid $text-color;
-  padding: 150px 0;
-  text-align: center;
-  background-color: rgba($color: #F6F6C9, $alpha: 0.3);
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
 }
-.skill-card:first-child{
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+.skill-card-2{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2rem;
 }
-.skill-card:last-child{
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+.card-img{
+  width: 15%;
 }
-.skill-card h2{
-  margin-bottom: 3rem;
-}
-.skill-card ul li{
-  margin-top: 10px;
-}
-.tech-icon{
+.card-img img{
   border-radius: 50%;
-  width: 30%;
-  // margin-top: 50px;
-  margin-bottom: 10px;
+}
+.skill-text-1{
+  width: 50%;
+  font-size: 1.2rem;
+  text-align: left;
+  padding-left: 2.5rem;
+}
+.skill-text-2{
+  width: 50%;
+  font-size: 1.2rem;
+  text-align: right;
+  padding-right: 2.5rem;
 }
 // PROJECTS SECTION
 .projects-cards{
