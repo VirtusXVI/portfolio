@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <div class="logo">
       <div>
-        <a href="#">Aveta Manuel</a>
+        <!-- <a href="#">Aveta Manuel</a> -->
       </div>
     </div>
     <!-- NAV -->
@@ -26,18 +26,20 @@ export default {
 <style lang="scss">
 @import '../../assets/scss/common.scss';
 .header-container{
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: fixed;
+  background-color: $background-color;
 }
 // LOGO
-.logo{
-  font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
-  width: 30%;
-  margin: 1rem 0;
-}
+// .logo{
+//   font-family: 'Dancing Script', cursive;
+//   font-size: 2rem;
+//   width: 30%;
+//   margin: 1rem 0;
+// }
 // NAV
 nav ul{
   display: flex;
@@ -45,6 +47,6 @@ nav ul{
   height: 100%;
 }
 nav ul li{
-  margin-left: 4rem;
+  margin: 2rem 2rem;
 }
 </style>

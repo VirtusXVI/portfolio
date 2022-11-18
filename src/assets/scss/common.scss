@@ -1,6 +1,7 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 html {
 	scroll-behavior: smooth;
@@ -13,9 +14,9 @@ html {
 }
 
 body{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    background-color: $semi-black;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
 }
 
 // MAIN
@@ -34,4 +35,8 @@ ul{
 a{
     text-decoration: none;
     color: white;
+}
+//TITLES
+.about-title , .titles {
+    font-family: 'DM Serif Display', serif;
 }

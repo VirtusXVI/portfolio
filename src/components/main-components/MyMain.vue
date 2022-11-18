@@ -1,33 +1,36 @@
 <template>
   <main>
     <!-- ABOUT SECTION -->
-    <section id="about-section" class="about-section">
-      <div class="small-logo">
-
-      </div>
-      <div class="about-title">
-        Ciao, sono Manuel. Sono un Full-Stack web developer
-      </div>
-      <div>
-        <img class="img" src='../../assets/img/me.jpg' alt="me">
-      </div>
-      <div class="discover-text">
-        <a href="#">
-          Scopri cosa so fare<br>
-          <i class="fa-solid fa-chevron-down"></i>
-        </a>
-      </div>
-    </section>
+    <div class="container container-blue">
+      <section id="about-section" class="about-section">
+        <div class="my-img">
+          <img class="pattern" src="../../assets/img/pattern2.png" alt="">
+          <img class="img" src="../../assets/img/me.jpg" alt="">
+          <img class="pattern-2" src="../../assets/img/pattern2.png" alt="">
+        </div>
+        <div class="title-logo">
+          <div>
+            <div class="about-title">
+              Ciao, sono Manuel. <br>
+            </div>
+            <div>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. A obcaecati illum sunt odit. Perferendis, rerum porro quaerat ea itaque odio dolorem, libero eveniet amet, fuga vero nihil accusamus ut repellendus.
+            </div>
+          </div>
+          <div class="about-logo">
+            <img src="../../assets/img/logo.png" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
     <!-- SKILLS SECTION -->
-    <section id="skills-section" class="skills-section">
+    <!-- <section id="skills-section" class="skills-section">
       <div class="titles">
         LE MIE SKILLS
       </div>
-      <!-- CARDS -->
       <div class="skills-cards">
-        <!-- FIRST CARD -->
         <div class="skill-card">
-          <img class="tech-icon" src="../../assets/img/frontend.png" alt="">
+          <img class="tech-icon" src="../../assets/img/frontend.jpg" alt="">
           <h2>FRONT END DEVELOPMENT</h2>
           <ul>
             <li>HTML 5</li>
@@ -36,7 +39,6 @@
             <li>VUE.JS</li>
           </ul>
         </div>
-        <!-- SECOND CARD -->
         <div class="skill-card">
           <img class="tech-icon" src="../../assets/img/backend.jpg" alt="">
           <h2>BACK END DEVELOPMENT</h2>
@@ -45,7 +47,6 @@
             <li>LARAVEL</li>
           </ul>
         </div>
-        <!-- THIRD CARD -->
         <div class="skill-card">
           <img class="tech-icon" src="../../assets/img/tools.jpg" alt="">
           <h2>DEV TOOLS</h2>
@@ -57,42 +58,37 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- PROJECTS SECTION -->
-    <section id="projects-section" class="projects-section">
+    <!-- <section id="projects-section" class="projects-section">
       <div class="titles">
         I MIEI PROGETTI
       </div>
       <div class="projects-cards">
-        <!-- FIRST CARD -->
         <div class="project-card">
           <img src="../../assets/img/projects/boolflix.png" alt="">
           <div>
             Progetto riguardante l'utilizzo di API per ricevere dati da un database e mostrarli in pagina.
           </div>
         </div>
-        <!-- SECOND CARD -->
         <div class="project-card">
           <img src="../../assets/img/projects/deliveboo.png" alt="">
           <div>
             Progetto di gruppo il cui obiettivo era quello di riprodurre un sistema simile a quello di Deliveroo gestendo i ristoranti,gli ordini e i pagamenti.
           </div>
         </div>
-        <!-- THIRD CARD -->
         <div class="project-card">
           <img src="../../assets/img/projects/discord.png" alt="">
           <div>
             Progetto volto a replicare la grafica del sito della piattaforma Discord.
           </div>
         </div>
-        <!-- FOURTH CARD -->
         <div class="project-card">
           <img src="../../assets/img/projects/playstation.png" alt="">
           <div>
             Progetto volto a replicare la grafica del sito di Playstation.
           </div>
         </div>
-        <!-- FIFTH CARD -->
         <div class="project-card">
           <img src="../../assets/img/projects/boolzapp.png" alt="">
           <div>
@@ -100,7 +96,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
 
@@ -113,28 +109,72 @@ export default {
 <style lang="scss">
 @import '../../assets/scss/variables.scss';
 // MAIN
-main{
+.container{
   width: 60%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.container-blue{
+  border-left: 2px solid $text-color;
+  border-right: 2px solid $text-color;
+}
+.container-yellow{
+  border-left: 2px solid $background-color;
+  border-right: 2px solid $background-color;
 }
 // TITLES
 .titles{
   font-size: 4rem;
   text-align: center;
   margin-top: 100px;
+  color: $titles-color;
 }
+
 // ABOUT SECTION
 .about-section{
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 100px;
 }
 .about-title{
-  font-size: 4rem;
+  font-size: 3rem;
+  color: $text-color;
+}
+.title-logo{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.about-logo{
+  padding-top: 2rem;
+  width: 50%;
 }
 // MAIN IMG
+.my-img{
+  width: 40%;
+  position: relative;
+}
 .img{
-  margin-top: 100px;
-  width: 30%;
+  width: 237px;
   border-radius: 50%;
+}
+// PATTERN
+.pattern{
+  width: 104px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+}
+.pattern-2{
+  width: 208px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  z-index: -1;
 }
 // DISCOVER TEXT
 .discover-text{
@@ -144,6 +184,7 @@ i{
   height: 100px;
   width: 100px;
 }
+
 // SKILLS SECTION
 // CARDS
 .skills-cards{
@@ -152,10 +193,11 @@ i{
   margin-top: 100px;
 }
 .skill-card{
-  width: 40%;
-  border: 1px solid $semi-white;
+  width: 25%;
+  border: 1px solid $text-color;
   padding: 150px 0;
   text-align: center;
+  background-color: rgba($color: #F6F6C9, $alpha: 0.3);
 }
 .skill-card:first-child{
   border-top-left-radius: 25px;
@@ -201,6 +243,6 @@ i{
   margin: 20px 0;
   border-radius: 10px;
   object-fit: cover;
-  border: 1px solid $semi-white;
+  border: 1px solid $text-color;
 }
 </style>
