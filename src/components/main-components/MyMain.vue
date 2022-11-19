@@ -2,30 +2,35 @@
   <main>
     <!-- ABOUT SECTION -->
     <div class="container container-blue">
-      <section id="about-section" class="about-section">
-        <div class="my-img">
-          <img class="pattern" src="../../assets/img/pattern2.png" alt="">
-          <img class="img" src="../../assets/img/me.jpg" alt="">
-          <img class="pattern-2" src="../../assets/img/pattern2.png" alt="">
-        </div>
-        <div class="title-logo">
-          <div>
-            <div class="about-title">
-              Ciao, sono Manuel. <br>
+      <div class="about-adjustments">
+        <section id="about-section" class="about-section">
+          <div class="my-img">
+            <img class="pattern" src="../../assets/img/pattern2.png" alt="">
+            <img class="img" src="../../assets/img/me.jpg" alt="">
+            <img class="pattern-2" src="../../assets/img/pattern2.png" alt="">
+          </div>
+          <div class="title-logo">
+            <div>
+              <div class="about-title-yellow">
+                Ciao, sono Manuel.
+              </div>
+              <div class="about-text">
+                Sono un Full-Stack Web Developer.
+              </div>
             </div>
-            <div class="about-text">
-              Sono un Full-Stack Web Developer.
+            <div class="about-logo">
+              <img class="logo" src="../../assets/img/logo.png" alt="">
             </div>
           </div>
-          <div class="about-logo">
-            <img class="logo" src="../../assets/img/logo.png" alt="">
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
     <div class="yellow-background blue-text">
       <div class="container container-yellow">
         <section id="skills-section" class="skills-section">
+          <div class="about-title-blue">
+            Le Mie Skills
+          </div>
           <div class="skill-card">
             <!-- FIRST CARD -->
             <div class="card-img">
@@ -79,49 +84,56 @@
       </div>
     </div>
     <!-- PROJECTS SECTION -->
-    <!-- <section id="projects-section" class="projects-section">
-      <div class="titles">
-        I MIEI PROGETTI
+    <section id="projects-section" class="projects-section">
+      <div class="container blue-background">
+        <div class="projects-adjustments">
+          <div class="about-title-yellow">
+            I miei progetti
+          </div>
+          <SimpleCarousel>
+            <div class="slide slide-1">
+              <a href="www.google.com">
+                <div>
+                  BOOLFLIX
+                </div>
+              </a>
+            </div>
+            <div class="slide slide-2">
+              <a href="www.google.com">
+                <div>
+                  DELIVEBOO
+                </div>
+              </a>
+            </div>
+            <div class="slide slide-3">
+              <a href="www.google.com">
+                <div>
+                  DISCORD
+                </div>
+              </a>
+            </div>
+            <div class="slide slide-4">
+              <a href="www.google.com">
+                <div>
+                  PLAYSTATION
+                </div>
+              </a>
+            </div>
+          </SimpleCarousel>
+        </div>
       </div>
-      <div class="projects-cards">
-        <div class="project-card">
-          <img src="../../assets/img/projects/boolflix.png" alt="">
-          <div>
-            Progetto riguardante l'utilizzo di API per ricevere dati da un database e mostrarli in pagina.
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="../../assets/img/projects/deliveboo.png" alt="">
-          <div>
-            Progetto di gruppo il cui obiettivo era quello di riprodurre un sistema simile a quello di Deliveroo gestendo i ristoranti,gli ordini e i pagamenti.
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="../../assets/img/projects/discord.png" alt="">
-          <div>
-            Progetto volto a replicare la grafica del sito della piattaforma Discord.
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="../../assets/img/projects/playstation.png" alt="">
-          <div>
-            Progetto volto a replicare la grafica del sito di Playstation.
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="../../assets/img/projects/boolzapp.png" alt="">
-          <div>
-            Progetto il cui obiettivo era quello di replicare il funzionamento di un applicazione stile Whatsapp.
-          </div>
-        </div>
-      </div>
-    </section> -->
+    </section>
   </main>
 </template>
 
 <script>
+import SimpleCarousel from "vue2-simple-carousel";
+
 export default {
   name: 'MyMain',
+  components:{
+    SimpleCarousel,
+  }
 }
 </script>
 
@@ -138,15 +150,20 @@ export default {
 .container{
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }
+// BACKGROUNDS
 .yellow-background{
   background-color: $text-color;
+}
+.blue-background{
+  background-color: $background-color;
+  border-left: 2px solid $text-color;
+  border-right: 2px solid $text-color;
 }
 .blue-text{
   color: $background-color;
 }
+// CONTAINERS
 .container-blue{
   border-left: 2px solid $text-color;
   border-right: 2px solid $text-color;
@@ -157,6 +174,10 @@ export default {
 }
 
 // ABOUT SECTION
+.about-adjustments{
+  display: flex;
+  justify-content: center;
+}
 .about-section{
   width: 90%;
   display: flex;
@@ -165,9 +186,14 @@ export default {
   padding-top: 100px;
   padding-bottom: 50px;
 }
-.about-title{
+.about-title-yellow{
   font-size: 6rem;
   color: $text-color;
+  text-align: center;
+}
+.about-title-blue{
+  font-size: 6rem;
+  color: $background-color;
 }
 .about-text{
   font-size: 2rem;
@@ -252,29 +278,66 @@ export default {
   padding-right: 2.5rem;
 }
 // PROJECTS SECTION
-.projects-cards{
-  margin: 100px 0;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.projects-section{
+  background-image: url(../../assets/img/pattern2.png);
+  background-size: 150px 150px;
 }
-.project-card{
-  width: 30%;
-  margin: 10px 0;
-  padding: 15px 40px;
-  border-radius: 25px;
-  border: 1px solid $semi-grey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.projects-adjustments{
+  padding: 4rem 0;
+}
+// CAROUSEL
+.carousel-wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+.carousel{
+  margin-top: 3rem;
+}
+.carousel__element{
+  height: 300px;
+}
+.slide{
+  height: 300px;
+  width: 100%;
+  line-height: 300px;
   text-align: center;
+  border-radius: 25px;
+  margin: 1rem;
 }
-.project-card img{
-  width: 80%;
-  height: 200px;
-  margin: 20px 0;
-  border-radius: 10px;
-  object-fit: cover;
+// SLIDES
+.slide span{
+  height: 100%;
+}
+.slide-1{
+  background-image: url(../../assets/img/projects/boolflix.png);
+}
+.slide-2{
+  background-image: url(../../assets/img/projects/deliveboo.png);
+}
+.slide-3{
+  background-image: url(../../assets/img/projects/discord.png);
+}
+.slide-4{
+  background-image: url(../../assets/img/projects/playstation.png);
+}
+.slide-4 a{
+  color: $background-color;
+}
+// BUTTONS
+.carousel button{
+  background-color: rgba($color: $background-color, $alpha: 0.8);
   border: 1px solid $text-color;
+  cursor: pointer;
+  height: 100px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  color: $text-color;
+  display: block;
+}
+button:hover {background-color: rgba($color: $text-color, $alpha: 0.7);}
+
+button:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 </style>
