@@ -12,6 +12,7 @@
         <li><a href="#about-section">ABOUT</a></li>
         <li><a href="#skills-section">SKILLS</a></li>
         <li><a href="#projects-section">PROGETTI</a></li>
+        <li><a href="#contacts-section">CONTATTI</a></li>
       </ul>
     </nav>
   </header>
@@ -42,5 +43,11 @@ nav ul{
 }
 nav ul li{
   margin: 2rem 2rem;
+}
+// MEDIA QUERIES
+@media only screen and (max-width: 1270px) {
+  nav{
+    display: none;
+  }
 }
 </style>

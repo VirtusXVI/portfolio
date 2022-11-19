@@ -29,6 +29,7 @@ export default class App extends Vue {}
 #app {
   position: absolute;
   width: 100%;
+  min-width: 360px;
   // background-image: url('./assets/img/background.jpg');
   // background-repeat: no-repeat;
   // background-size: contain;

@@ -11,8 +11,8 @@
           </div>
           <div class="title-logo">
             <div>
-              <div class="about-title-yellow">
-                Ciao, sono Manuel.
+              <div class="about-title-yellow about-intro">
+                Ciao, <br> sono Manuel.
               </div>
               <div class="about-text">
                 Sono un Full-Stack Web Developer.
@@ -85,35 +85,35 @@
     </div>
     <!-- PROJECTS SECTION -->
     <section id="projects-section" class="projects-section">
-      <div class="container blue-background">
+      <div class="container blue-background no-borders">
         <div class="projects-adjustments">
           <div class="about-title-yellow">
             I miei progetti
           </div>
           <SimpleCarousel>
             <div class="slide slide-1">
-              <a href="www.google.com">
+              <a href="https://github.com/VirtusXVI/vue-boolflix">
                 <div>
                   BOOLFLIX
                 </div>
               </a>
             </div>
             <div class="slide slide-2">
-              <a href="www.google.com">
+              <a href="https://github.com/VirtusXVI/deliverboo">
                 <div>
                   DELIVEBOO
                 </div>
               </a>
             </div>
             <div class="slide slide-3">
-              <a href="www.google.com">
+              <a href="https://github.com/VirtusXVI/htmlcss-discord">
                 <div>
                   DISCORD
                 </div>
               </a>
             </div>
             <div class="slide slide-4">
-              <a href="www.google.com">
+              <a href="https://github.com/VirtusXVI/htmlcss-playstation">
                 <div>
                   PLAYSTATION
                 </div>
@@ -123,6 +123,17 @@
         </div>
       </div>
     </section>
+    <div class="yellow-background blue-text">
+      <div class="container container-yellow">
+        <section id="contacts-section" class="contacts-section">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/manuel-aveta/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/VirtusXVI"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:manuel.aveta2001@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -172,7 +183,9 @@ export default {
   border-left: 2px solid $background-color;
   border-right: 2px solid $background-color;
 }
-
+.no-borders{
+  border: none;
+}
 // ABOUT SECTION
 .about-adjustments{
   display: flex;
@@ -187,13 +200,16 @@ export default {
   padding-bottom: 50px;
 }
 .about-title-yellow{
-  font-size: 6rem;
+  font-size: 5rem;
   color: $text-color;
   text-align: center;
 }
 .about-title-blue{
   font-size: 6rem;
   color: $background-color;
+}
+.about-intro{
+  text-align: left;
 }
 .about-text{
   font-size: 2rem;
@@ -279,11 +295,13 @@ export default {
 }
 // PROJECTS SECTION
 .projects-section{
-  background-image: url(../../assets/img/pattern2.png);
-  background-size: 150px 150px;
+  background-image: url(../../assets/img/pattern.png);
+  background-position: center;
+  background-size: 245px;
 }
 .projects-adjustments{
   padding: 4rem 0;
+  padding-bottom: 6.5rem;
 }
 // CAROUSEL
 .carousel-wrapper{
@@ -298,15 +316,20 @@ export default {
 }
 .slide{
   height: 300px;
-  width: 100%;
+  width: 300px;
   line-height: 300px;
   text-align: center;
   border-radius: 25px;
   margin: 1rem;
+  background-position: center top;
 }
 // SLIDES
 .slide span{
   height: 100%;
+}
+.slide a div{
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-radius: 25px;
 }
 .slide-1{
   background-image: url(../../assets/img/projects/boolflix.png);
@@ -320,24 +343,66 @@ export default {
 .slide-4{
   background-image: url(../../assets/img/projects/playstation.png);
 }
-.slide-4 a{
-  color: $background-color;
-}
 // BUTTONS
 .carousel button{
-  background-color: rgba($color: $background-color, $alpha: 0.8);
-  border: 1px solid $text-color;
+  background-color: rgba($color: $text-color, $alpha: 0.8);
+  border: 1px solid $background-color;
   cursor: pointer;
-  height: 100px;
+  height: 50px;
+  width: 50px;
   padding: 0 1rem;
-  border-radius: 10px;
-  color: $text-color;
+  border-radius: 50%;
+  color: $background-color;
   display: block;
 }
 button:hover {background-color: rgba($color: $text-color, $alpha: 0.7);}
 
 button:active {
-  box-shadow: 0 2px #666;
+  box-shadow: 0 2px rgb(0, 0, 0);
   transform: translateY(4px);
+}
+// CONTACTS SECTION
+.contacts-section{
+  padding: 1rem 0;
+  width: 30%;
+  margin: 0 auto;
+}
+.contacts-section ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+.contacts-section ul li a{
+  color: $background-color;
+  font-size: 2.5rem;
+}
+// MEDIA QUERIES
+@media only screen and (max-width: 1270px) {
+  .about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-img{
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+  .img{
+    width: 100%;
+  }
+  .pattern{
+    width: 40%;
+  }
+  .pattern-2{
+    width: 80%;
+  }
+  .title-logo{
+    width: 80%;
+  }
+  // .skill-card{
+  //   justify-content: center;
+  // }
+  // .skill-card-2{
+  //   justify-content: center;
+  // }
 }
 </style>
