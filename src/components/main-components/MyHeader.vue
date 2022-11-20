@@ -55,7 +55,7 @@ export default {
 }
 // BURGER
 .burger{
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   display: none;
   justify-content: center;
 }
@@ -70,16 +70,19 @@ export default {
 .burger-menu-1{
   display: block;
   position: absolute;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background-color: $background-color;
 }
 .burger-menu-1 ul{
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.burger-menu-1 ul li{
+  padding: 1rem 0;
 }
 // NAV
 nav ul{
@@ -91,7 +94,7 @@ nav ul li{
   margin: 2rem 2rem;
 }
 // MEDIA QUERIES
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 768px) {
   nav ul li{
     margin: 2rem 8px;
   }

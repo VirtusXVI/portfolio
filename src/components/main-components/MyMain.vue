@@ -183,6 +183,10 @@ export default {
 <style lang="scss">
 @import '../../assets/scss/variables.scss';
 // COMMON
+// MAIN
+main{
+    margin-top: 100px;
+}
 // TITLES
 .titles h2{
   font-size: 2.2rem;
@@ -416,25 +420,65 @@ button:active {
 // MEDIA QUERIES
 @media only screen and (max-width: 1270px) {
   .about-section{
+    justify-content: space-between;
+  }
+  .img{
+    width: 300px;
+  }
+  .pattern{
+    width: 150px;
+  }
+  .pattern-2{
+    width: 200px;
+    top: 30%;
+    left: 45%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .blue-background{
+    border-left: none;
+    border-right: none;
+  }
+  .container-blue{
+    border-left: none;
+    border-right: none;
+  }
+  .container-yellow{
+    border-left: none;
+    border-right: none;
+  }
+  main{
+    margin-top: 50px;
+  }
+  .about-section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
+    width: 60%;
   }
   .my-img{
-    width: 80%;
+    width: 100%;
     margin-bottom: 4rem;
   }
-  .img{
+  .title-logo{
     width: 100%;
   }
+  .img{
+    width: 90%;
+  }
   .pattern{
-    width: 40%;
+    width: 35%;
   }
   .pattern-2{
-    width: 80%;
+    width: 50%;
+    top: 55%;
   }
   .title-logo{
     width: 80%;
+  }
+  .skills-section{
+    padding: 50px 0;
   }
   .skill-card{
     width: 90%;
@@ -457,6 +501,23 @@ button:active {
     padding-right: 0;
     padding-left: 0;
   }
+  .projects-adjustments{
+    padding: 2rem 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .carousel{
+    margin-top: 1rem;
+  }
+  .slide{
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    margin-top: 2rem;
+  }
+  .carousel__element{
+    height: 200px;
+  }
   .big-carousel{
   display: none;
   }
@@ -465,6 +526,24 @@ button:active {
   }
   .contacts-section{
     width: 100%;
+  }
+  .contacts-section ul li a{
+    font-size: 1.5rem;
+  }
+  .about-title-yellow{
+    font-size: 3rem;
+  }
+  .projects-adjustments .about-title-yellow{
+    font-size: 2.5rem;
+  }
+  .about-title-blue{
+    font-size: 3rem;
+  }
+  .about-text{
+    font-size: 1.5rem;
+  }
+  .titles h2{
+    font-size: 1.5rem;
   }
 }
 </style>
