@@ -38,7 +38,7 @@
             </div>
             <div class="skill-text-1">
               <div class="titles">
-                <h2>FRONT-END DEVELOPMENT</h2>
+                <h2>FRONT-END</h2>
               </div>
               <ul>
                 <li>HTML 5</li>
@@ -52,7 +52,7 @@
           <div class="skill-card-2">
             <div class="skill-text-2">
               <div class="titles">
-                <h2>BACK-END DEVELOPMENT</h2>
+                <h2>BACK-END</h2>
               </div>
               <ul>
                 <li>PHP</li>
@@ -90,7 +90,39 @@
           <div class="about-title-yellow">
             I miei progetti
           </div>
-          <SimpleCarousel>
+          <!-- BIG CAROUSEL -->
+          <SimpleCarousel class="big-carousel">
+            <div class="slide slide-1">
+              <a href="https://github.com/VirtusXVI/vue-boolflix">
+                <div>
+                  BOOLFLIX
+                </div>
+              </a>
+            </div>
+            <div class="slide slide-2">
+              <a href="https://github.com/VirtusXVI/deliverboo">
+                <div>
+                  DELIVEBOO
+                </div>
+              </a>
+            </div>
+            <div class="slide slide-3">
+              <a href="https://github.com/VirtusXVI/htmlcss-discord">
+                <div>
+                  DISCORD
+                </div>
+              </a>
+            </div>
+            <div class="slide slide-4">
+              <a href="https://github.com/VirtusXVI/htmlcss-playstation">
+                <div>
+                  PLAYSTATION
+                </div>
+              </a>
+            </div>
+          </SimpleCarousel>
+          <!-- SMALL CAROUSEL -->
+          <SimpleCarousel :items-per-view="1" class="small-carousel">
             <div class="slide slide-1">
               <a href="https://github.com/VirtusXVI/vue-boolflix">
                 <div>
@@ -195,7 +227,6 @@ export default {
   width: 90%;
   display: flex;
   justify-content: center;
-  // align-items: center;
   padding-top: 100px;
   padding-bottom: 50px;
 }
@@ -207,6 +238,7 @@ export default {
 .about-title-blue{
   font-size: 6rem;
   color: $background-color;
+  text-align: center;
 }
 .about-intro{
   text-align: left;
@@ -294,6 +326,12 @@ export default {
   padding-right: 2.5rem;
 }
 // PROJECTS SECTION
+.big-carousel{
+  display: block;
+}
+.small-carousel{
+  display: none;
+}
 .projects-section{
   background-image: url(../../assets/img/pattern.png);
   background-position: center;
@@ -398,11 +436,35 @@ button:active {
   .title-logo{
     width: 80%;
   }
-  // .skill-card{
-  //   justify-content: center;
-  // }
-  // .skill-card-2{
-  //   justify-content: center;
-  // }
+  .skill-card{
+    width: 90%;
+    flex-direction: column;
+  }
+  .skill-card-2{
+    width: 90%;
+    flex-direction: column-reverse;
+  }
+  .skill-text-1{
+    width: 90%;
+    margin-top: 1rem;
+    text-align: center;
+    padding-left: 0;
+  }
+  .skill-text-2{
+    width: 90%;
+    margin-top: 1rem;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .big-carousel{
+  display: none;
+  }
+  .small-carousel{
+    display: block;
+  }
+  .contacts-section{
+    width: 100%;
+  }
 }
 </style>
